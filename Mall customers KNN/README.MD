@@ -31,6 +31,7 @@ You can install these using the following command:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn yellowbrick
+```
 
 ## Getting Started
 
