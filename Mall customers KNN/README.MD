@@ -43,6 +43,9 @@ To get started with this project, follow the steps below:
 
 3. **Data Exploration and Analysis:** The script first reads the data from the dataset and performs exploratory data analysis (EDA) to understand its structure and attributes.
 
+## Scatter Plot
+![Scatter Plot](scatter_plot.png)
+
 4. **Visualization of Data Distribution:** The script includes a scatter plot of 'Annual Income' vs 'Spending Score' for initial data exploration. This visualization provides insights into potential patterns in customer behavior.
 
 5. **Applying K-Means Clustering:** The K-Means clustering algorithm is then applied to segment the customers based on their 'Annual Income' and 'Spending Score'. The elbow method and silhouette score are used to identify the optimal number of clusters.
@@ -50,6 +53,13 @@ To get started with this project, follow the steps below:
 6. **Visualizing Clusters:** The script concludes by visualizing the clustered customers using a scatter plot. Each cluster is differentiated by a distinct color, helping to identify different customer segments.
 
 By following these steps, you can understand the process of customer segmentation using K-Means clustering and gain insights into the distinct customer segments present in the dataset.
+## Clustering
+
+### Elbow Method
+![Elbow Method](elbow_plot.png)
+
+### Clustered Clients
+![Clustered Clients](clustered_clients.png)
 
 ## Results
 
