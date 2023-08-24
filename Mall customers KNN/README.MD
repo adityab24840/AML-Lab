@@ -51,4 +51,14 @@ To get started with this project, follow the steps below:
 
 By following these steps, you can understand the process of customer segmentation using K-Means clustering and gain insights into the distinct customer segments present in the dataset.
 
-Feel free to modify and experiment with the provided code to adapt it to your specific needs and explore further insights from the data.
+**Results**
+
+The results of the customer segmentation will be displayed through various visualizations:
+
+1. Scatter plot of 'Annual Income' vs 'Spending Score' for initial data exploration.
+2. Elbow method plot to identify the optimal number of clusters.
+3. Silhouette score plot to further validate the optimal cluster count.
+4. Scatter plot of clustered customers based on 'Annual Income' and 'Spending Score', colored by cluster.
+
+**Conclussion**
+Customer segmentation helps businesses gain insights into different customer groups and tailor marketing strategies accordingly. This project showcases the process of using K-Means clustering for customer segmentation and provides visualizations to aid in understanding the results.
