@@ -60,5 +60,5 @@ The results of the customer segmentation will be displayed through various visua
 3. Silhouette score plot to further validate the optimal cluster count.
 4. Scatter plot of clustered customers based on 'Annual Income' and 'Spending Score', colored by cluster.
 
-## Conclussion
+## Conclusion
 Customer segmentation helps businesses gain insights into different customer groups and tailor marketing strategies accordingly. This project showcases the process of using K-Means clustering for customer segmentation and provides visualizations to aid in understanding the results.
