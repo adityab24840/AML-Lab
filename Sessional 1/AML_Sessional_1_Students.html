@@ -8203,7 +8203,7 @@ Count of zeros in Column Outcome : 491, percentage 0s: 65.99%
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>columns "Glucose," "BloodPressure," "BMI," "SkinThickness," and "Age" are the ones that should never contain 0</p>
+<p>columns "Glucose," "BloodPressure," "BMI," "SkinThickness," and "Insulin " are the ones that should never contain 0</p>
 </div>
 </div>
 </div>
@@ -8218,8 +8218,8 @@ Count of zeros in Column Outcome : 491, percentage 0s: 65.99%
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: 13 Replace 0 with Nan for features that should never contain 0</span>
 <span class="c1"># Choose 5 columns you want to replace 0 with Nan</span>
 
-<span class="n">df</span><span class="p">[[</span><span class="s1">'Glucose'</span><span class="p">,</span> <span class="s1">'BloodPressure'</span><span class="p">,</span> <span class="s1">'BMI'</span><span class="p">,</span> <span class="s1">'SkinThickness'</span><span class="p">,</span> <span class="s1">'Age'</span><span class="p">]]</span> <span class="o">=</span> \
-    <span class="n">df</span><span class="p">[[</span><span class="s1">'Glucose'</span><span class="p">,</span> <span class="s1">'BloodPressure'</span><span class="p">,</span> <span class="s1">'BMI'</span><span class="p">,</span> <span class="s1">'SkinThickness'</span><span class="p">,</span> <span class="s1">'Age'</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">'Glucose'</span><span class="p">,</span> <span class="s1">'BloodPressure'</span><span class="p">,</span> <span class="s1">'BMI'</span><span class="p">,</span> <span class="s1">'SkinThickness'</span><span class="p">,</span> <span class="s1">'Insulin'</span><span class="p">]]</span> <span class="o">=</span> \
+    <span class="n">df</span><span class="p">[[</span><span class="s1">'Glucose'</span><span class="p">,</span> <span class="s1">'BloodPressure'</span><span class="p">,</span> <span class="s1">'BMI'</span><span class="p">,</span> <span class="s1">'SkinThickness'</span><span class="p">,</span> <span class="s1">'Insulin'</span><span class="p">]]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">NaN</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8252,7 +8252,7 @@ Count of zeros in Column Outcome : 491, percentage 0s: 65.99%
 Glucose                       5
 BloodPressure                34
 SkinThickness               215
-Insulin                       0
+Insulin                     359
 BMI                          10
 DiabetesPedigreeFunction      0
 Age                           0
@@ -8390,7 +8390,7 @@ dtype: int64</pre>
 <td>138.0</td>
 <td>62.0</td>
 <td>35.0</td>
-<td>0</td>
+<td>NaN</td>
 <td>33.6</td>
 <td>0.127</td>
 <td>47</td>
@@ -8401,7 +8401,7 @@ dtype: int64</pre>
 <td>84.0</td>
 <td>82.0</td>
 <td>31.0</td>
-<td>125</td>
+<td>125.0</td>
 <td>38.2</td>
 <td>0.233</td>
 <td>23</td>
@@ -8412,7 +8412,7 @@ dtype: int64</pre>
 <td>145.0</td>
 <td>NaN</td>
 <td>NaN</td>
-<td>0</td>
+<td>NaN</td>
 <td>44.2</td>
 <td>0.630</td>
 <td>31</td>
@@ -8423,7 +8423,7 @@ dtype: int64</pre>
 <td>135.0</td>
 <td>68.0</td>
 <td>42.0</td>
-<td>250</td>
+<td>250.0</td>
 <td>42.3</td>
 <td>0.365</td>
 <td>24</td>
@@ -8434,7 +8434,7 @@ dtype: int64</pre>
 <td>139.0</td>
 <td>62.0</td>
 <td>41.0</td>
-<td>480</td>
+<td>480.0</td>
 <td>40.7</td>
 <td>0.536</td>
 <td>21</td>
@@ -8456,7 +8456,7 @@ dtype: int64</pre>
 <td>100.0</td>
 <td>62.0</td>
 <td>NaN</td>
-<td>0</td>
+<td>NaN</td>
 <td>64.4</td>
 <td>0.152</td>
 <td>36</td>
@@ -8467,7 +8467,7 @@ dtype: int64</pre>
 <td>163.0</td>
 <td>40.0</td>
 <td>23.0</td>
-<td>64</td>
+<td>64.0</td>
 <td>40.7</td>
 <td>0.322</td>
 <td>33</td>
@@ -8478,7 +8478,7 @@ dtype: int64</pre>
 <td>139.0</td>
 <td>84.0</td>
 <td>37.0</td>
-<td>0</td>
+<td>NaN</td>
 <td>50.7</td>
 <td>0.320</td>
 <td>50</td>
@@ -8489,7 +8489,7 @@ dtype: int64</pre>
 <td>167.0</td>
 <td>44.0</td>
 <td>30.0</td>
-<td>140</td>
+<td>140.0</td>
 <td>52.7</td>
 <td>0.452</td>
 <td>28</td>
@@ -8500,7 +8500,7 @@ dtype: int64</pre>
 <td>162.0</td>
 <td>NaN</td>
 <td>110.0</td>
-<td>215</td>
+<td>215.0</td>
 <td>48.7</td>
 <td>0.520</td>
 <td>24</td>
@@ -8628,7 +8628,7 @@ dtype: int64</pre>
 <td>158.0</td>
 <td>114.0</td>
 <td>NaN</td>
-<td>0</td>
+<td>NaN</td>
 <td>42.3</td>
 <td>0.257</td>
 <td>44</td>
@@ -8639,10 +8639,32 @@ dtype: int64</pre>
 <td>161.0</td>
 <td>50.0</td>
 <td>NaN</td>
-<td>0</td>
+<td>NaN</td>
 <td>21.9</td>
 <td>0.254</td>
 <td>65</td>
+</tr>
+<tr>
+<th>77</th>
+<td>5</td>
+<td>95.0</td>
+<td>72.0</td>
+<td>33.0</td>
+<td>NaN</td>
+<td>37.7</td>
+<td>0.370</td>
+<td>27</td>
+</tr>
+<tr>
+<th>352</th>
+<td>3</td>
+<td>61.0</td>
+<td>82.0</td>
+<td>28.0</td>
+<td>NaN</td>
+<td>34.4</td>
+<td>0.243</td>
+<td>46</td>
 </tr>
 <tr>
 <th>235</th>
@@ -8650,32 +8672,10 @@ dtype: int64</pre>
 <td>171.0</td>
 <td>72.0</td>
 <td>NaN</td>
-<td>0</td>
+<td>NaN</td>
 <td>43.6</td>
 <td>0.479</td>
 <td>26</td>
-</tr>
-<tr>
-<th>101</th>
-<td>1</td>
-<td>151.0</td>
-<td>60.0</td>
-<td>NaN</td>
-<td>0</td>
-<td>26.1</td>
-<td>0.179</td>
-<td>22</td>
-</tr>
-<tr>
-<th>239</th>
-<td>0</td>
-<td>104.0</td>
-<td>76.0</td>
-<td>NaN</td>
-<td>0</td>
-<td>18.4</td>
-<td>0.582</td>
-<td>27</td>
 </tr>
 <tr>
 <th>...</th>
@@ -8689,37 +8689,26 @@ dtype: int64</pre>
 <td>...</td>
 </tr>
 <tr>
-<th>72</th>
-<td>13</td>
-<td>126.0</td>
+<th>756</th>
+<td>7</td>
+<td>137.0</td>
 <td>90.0</td>
+<td>41.0</td>
 <td>NaN</td>
-<td>0</td>
-<td>43.4</td>
-<td>0.583</td>
-<td>42</td>
-</tr>
-<tr>
-<th>570</th>
-<td>3</td>
-<td>78.0</td>
-<td>70.0</td>
-<td>NaN</td>
-<td>0</td>
-<td>32.5</td>
-<td>0.270</td>
+<td>32.0</td>
+<td>0.391</td>
 <td>39</td>
 </tr>
 <tr>
-<th>632</th>
+<th>9</th>
 <td>2</td>
-<td>111.0</td>
-<td>60.0</td>
+<td>89.0</td>
+<td>90.0</td>
+<td>30.0</td>
 <td>NaN</td>
-<td>0</td>
-<td>26.2</td>
-<td>0.343</td>
-<td>23</td>
+<td>33.5</td>
+<td>0.292</td>
+<td>42</td>
 </tr>
 <tr>
 <th>192</th>
@@ -8727,7 +8716,7 @@ dtype: int64</pre>
 <td>159.0</td>
 <td>66.0</td>
 <td>NaN</td>
-<td>0</td>
+<td>NaN</td>
 <td>30.4</td>
 <td>0.383</td>
 <td>36</td>
@@ -8738,14 +8727,25 @@ dtype: int64</pre>
 <td>132.0</td>
 <td>80.0</td>
 <td>NaN</td>
-<td>0</td>
+<td>NaN</td>
 <td>34.4</td>
 <td>0.402</td>
 <td>44</td>
 </tr>
+<tr>
+<th>717</th>
+<td>10</td>
+<td>94.0</td>
+<td>72.0</td>
+<td>18.0</td>
+<td>NaN</td>
+<td>23.1</td>
+<td>0.595</td>
+<td>56</td>
+</tr>
 </tbody>
 </table>
-<p>158 rows × 8 columns</p>
+<p>269 rows × 8 columns</p>
 </div>
 </div>
 </div>
@@ -8800,7 +8800,7 @@ dtype: int64</pre>
 Glucose                       4
 BloodPressure                23
 SkinThickness               151
-Insulin                       0
+Insulin                     267
 BMI                           7
 DiabetesPedigreeFunction      0
 Age                           0
@@ -8855,6 +8855,7 @@ dtype: int64</pre>
 <th>Glucose</th>
 <th>BloodPressure</th>
 <th>SkinThickness</th>
+<th>Insulin</th>
 <th>BMI</th>
 </tr>
 </thead>
@@ -8864,6 +8865,7 @@ dtype: int64</pre>
 <td>158.0</td>
 <td>114.0</td>
 <td>NaN</td>
+<td>NaN</td>
 <td>42.3</td>
 </tr>
 <tr>
@@ -8871,12 +8873,14 @@ dtype: int64</pre>
 <td>109.0</td>
 <td>38.0</td>
 <td>18.0</td>
+<td>120.0</td>
 <td>23.1</td>
 </tr>
 <tr>
 <th>294</th>
 <td>161.0</td>
 <td>50.0</td>
+<td>NaN</td>
 <td>NaN</td>
 <td>21.9</td>
 </tr>
@@ -8885,6 +8889,7 @@ dtype: int64</pre>
 <td>95.0</td>
 <td>72.0</td>
 <td>33.0</td>
+<td>NaN</td>
 <td>37.7</td>
 </tr>
 <tr>
@@ -8892,10 +8897,12 @@ dtype: int64</pre>
 <td>61.0</td>
 <td>82.0</td>
 <td>28.0</td>
+<td>NaN</td>
 <td>34.4</td>
 </tr>
 <tr>
 <th>...</th>
+<td>...</td>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -8906,12 +8913,14 @@ dtype: int64</pre>
 <td>120.0</td>
 <td>80.0</td>
 <td>37.0</td>
+<td>150.0</td>
 <td>42.3</td>
 </tr>
 <tr>
 <th>192</th>
 <td>159.0</td>
 <td>66.0</td>
+<td>NaN</td>
 <td>NaN</td>
 <td>30.4</td>
 </tr>
@@ -8920,12 +8929,14 @@ dtype: int64</pre>
 <td>167.0</td>
 <td>106.0</td>
 <td>46.0</td>
+<td>231.0</td>
 <td>37.6</td>
 </tr>
 <tr>
 <th>592</th>
 <td>132.0</td>
 <td>80.0</td>
+<td>NaN</td>
 <td>NaN</td>
 <td>34.4</td>
 </tr>
@@ -8934,11 +8945,12 @@ dtype: int64</pre>
 <td>94.0</td>
 <td>72.0</td>
 <td>18.0</td>
+<td>NaN</td>
 <td>23.1</td>
 </tr>
 </tbody>
 </table>
-<p>558 rows × 4 columns</p>
+<p>558 rows × 5 columns</p>
 </div>
 </div>
 </div>
@@ -9046,27 +9058,27 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 <tbody>
 <tr>
 <th>691</th>
-<td>0</td>
+<td>NaN</td>
 <td>0.257</td>
 </tr>
 <tr>
 <th>599</th>
-<td>120</td>
+<td>120.0</td>
 <td>0.407</td>
 </tr>
 <tr>
 <th>294</th>
-<td>0</td>
+<td>NaN</td>
 <td>0.254</td>
 </tr>
 <tr>
 <th>77</th>
-<td>0</td>
+<td>NaN</td>
 <td>0.370</td>
 </tr>
 <tr>
 <th>352</th>
-<td>0</td>
+<td>NaN</td>
 <td>0.243</td>
 </tr>
 <tr>
@@ -9076,27 +9088,27 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 </tr>
 <tr>
 <th>740</th>
-<td>150</td>
+<td>150.0</td>
 <td>0.785</td>
 </tr>
 <tr>
 <th>192</th>
-<td>0</td>
+<td>NaN</td>
 <td>0.383</td>
 </tr>
 <tr>
 <th>662</th>
-<td>231</td>
+<td>231.0</td>
 <td>0.165</td>
 </tr>
 <tr>
 <th>592</th>
-<td>0</td>
+<td>NaN</td>
 <td>0.402</td>
 </tr>
 <tr>
 <th>717</th>
-<td>0</td>
+<td>NaN</td>
 <td>0.595</td>
 </tr>
 </tbody>
@@ -9149,13 +9161,13 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>array([[1.30e+01,      nan, 0.00e+00, 2.57e-01, 4.40e+01],
+<pre>array([[1.30e+01,      nan,      nan, 2.57e-01, 4.40e+01],
        [1.00e+00, 1.80e+01, 1.20e+02, 4.07e-01, 2.60e+01],
-       [0.00e+00,      nan, 0.00e+00, 2.54e-01, 6.50e+01],
+       [0.00e+00,      nan,      nan, 2.54e-01, 6.50e+01],
        ...,
        [8.00e+00, 4.60e+01, 2.31e+02, 1.65e-01, 4.30e+01],
-       [3.00e+00,      nan, 0.00e+00, 4.02e-01, 4.40e+01],
-       [1.00e+01, 1.80e+01, 0.00e+00, 5.95e-01, 5.60e+01]])</pre>
+       [3.00e+00,      nan,      nan, 4.02e-01, 4.40e+01],
+       [1.00e+01, 1.80e+01,      nan, 5.95e-01, 5.60e+01]])</pre>
 </div>
 </div>
 </div>
@@ -9185,13 +9197,13 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>array([[1.58e+02, 1.14e+02, 4.23e+01, ..., 0.00e+00, 2.57e-01, 4.40e+01],
+<pre>array([[1.58e+02, 1.14e+02, 4.23e+01, ...,      nan, 2.57e-01, 4.40e+01],
        [1.09e+02, 3.80e+01, 2.31e+01, ..., 1.20e+02, 4.07e-01, 2.60e+01],
-       [1.61e+02, 5.00e+01, 2.19e+01, ..., 0.00e+00, 2.54e-01, 6.50e+01],
+       [1.61e+02, 5.00e+01, 2.19e+01, ...,      nan, 2.54e-01, 6.50e+01],
        ...,
        [1.67e+02, 1.06e+02, 3.76e+01, ..., 2.31e+02, 1.65e-01, 4.30e+01],
-       [1.32e+02, 8.00e+01, 3.44e+01, ..., 0.00e+00, 4.02e-01, 4.40e+01],
-       [9.40e+01, 7.20e+01, 2.31e+01, ..., 0.00e+00, 5.95e-01, 5.60e+01]])</pre>
+       [1.32e+02, 8.00e+01, 3.44e+01, ...,      nan, 4.02e-01, 4.40e+01],
+       [9.40e+01, 7.20e+01, 2.31e+01, ...,      nan, 5.95e-01, 5.60e+01]])</pre>
 </div>
 </div>
 </div>
@@ -9238,13 +9250,19 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>array([[1.58e+02, 1.14e+02, 4.23e+01, ..., 0.00e+00, 2.57e-01, 4.40e+01],
-       [1.09e+02, 3.80e+01, 2.31e+01, ..., 1.20e+02, 4.07e-01, 2.60e+01],
-       [1.61e+02, 5.00e+01, 2.19e+01, ..., 0.00e+00, 2.54e-01, 6.50e+01],
+<pre>array([[1.58000000e+02, 1.14000000e+02, 4.23000000e+01, ...,
+        2.37599549e+02, 2.57000000e-01, 4.40000000e+01],
+       [1.09000000e+02, 3.80000000e+01, 2.31000000e+01, ...,
+        1.20000000e+02, 4.07000000e-01, 2.60000000e+01],
+       [1.61000000e+02, 5.00000000e+01, 2.19000000e+01, ...,
+        2.26669815e+02, 2.54000000e-01, 6.50000000e+01],
        ...,
-       [1.67e+02, 1.06e+02, 3.76e+01, ..., 2.31e+02, 1.65e-01, 4.30e+01],
-       [1.32e+02, 8.00e+01, 3.44e+01, ..., 0.00e+00, 4.02e-01, 4.40e+01],
-       [9.40e+01, 7.20e+01, 2.31e+01, ..., 0.00e+00, 5.95e-01, 5.60e+01]])</pre>
+       [1.67000000e+02, 1.06000000e+02, 3.76000000e+01, ...,
+        2.31000000e+02, 1.65000000e-01, 4.30000000e+01],
+       [1.32000000e+02, 8.00000000e+01, 3.44000000e+01, ...,
+        1.76808163e+02, 4.02000000e-01, 4.40000000e+01],
+       [9.40000000e+01, 7.20000000e+01, 2.31000000e+01, ...,
+        8.56658773e+01, 5.95000000e-01, 5.60000000e+01]])</pre>
 </div>
 </div>
 </div>
@@ -9277,18 +9295,18 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>array([[ 1.18954035,  3.36441269,  1.31215916, ..., -0.70440862,
+<pre>array([[ 1.18954035,  3.36441269,  1.31215916, ...,  0.85174053,
         -0.63290132,  0.95454214],
-       [-0.42357097, -2.78819233, -1.37708204, ...,  0.32344557,
+       [-0.42357097, -2.78819233, -1.37708204, ..., -0.35994306,
         -0.17876717, -0.62389402],
-       [ 1.28830226, -1.81672838, -1.54515962, ..., -0.70440862,
+       [ 1.28830226, -1.81672838, -1.54515962, ...,  0.73912633,
         -0.641984  ,  2.79605101],
        ...,
-       [ 1.4858261 ,  2.71677005,  0.65385532, ...,  1.2742107 ,
+       [ 1.4858261 ,  2.71677005,  0.65385532, ...,  0.78374227,
         -0.91143693,  0.86685124],
-       [ 0.33360373,  0.6119315 ,  0.20564845, ..., -0.70440862,
+       [ 0.33360373,  0.6119315 ,  0.20564845, ...,  0.22537822,
         -0.19390497,  0.95454214],
-       [-0.91738055, -0.03571114, -1.37708204, ..., -0.70440862,
+       [-0.91738055, -0.03571114, -1.37708204, ..., -0.71370372,
          0.3904143 ,  2.00683292]])</pre>
 </div>
 </div>
@@ -9320,7 +9338,7 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<style>#sk-container-id-5 {color: black;background-color: white;}#sk-container-id-5 pre{padding: 0;}#sk-container-id-5 div.sk-toggleable {background-color: white;}#sk-container-id-5 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-5 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-5 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-5 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-5 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-5 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-5 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-5 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-5 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-5 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-5 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-5 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-5 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-5 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-5 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-5 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-5 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-5 div.sk-item {position: relative;z-index: 1;}#sk-container-id-5 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-5 div.sk-item::before, #sk-container-id-5 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-5 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-5 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-5 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-5 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-5 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-5 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-5 div.sk-label-container {text-align: center;}#sk-container-id-5 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-5 div.sk-text-repr-fallback {display: none;}</style><div class="sk-top-container" id="sk-container-id-5"><div class="sk-text-repr-fallback"><pre>KNeighborsClassifier()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br/>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input checked="" class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-5">KNeighborsClassifier</label><div class="sk-toggleable__content"><pre>KNeighborsClassifier()</pre></div></div></div></div></div>
+<style>#sk-container-id-9 {color: black;background-color: white;}#sk-container-id-9 pre{padding: 0;}#sk-container-id-9 div.sk-toggleable {background-color: white;}#sk-container-id-9 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-9 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-9 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-9 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-9 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-9 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-9 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-9 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-9 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-9 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-9 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-9 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-9 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-9 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-9 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-9 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-9 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-9 div.sk-item {position: relative;z-index: 1;}#sk-container-id-9 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-9 div.sk-item::before, #sk-container-id-9 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-9 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-9 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-9 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-9 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-9 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-9 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-9 div.sk-label-container {text-align: center;}#sk-container-id-9 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-9 div.sk-text-repr-fallback {display: none;}</style><div class="sk-top-container" id="sk-container-id-9"><div class="sk-text-repr-fallback"><pre>KNeighborsClassifier()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br/>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input checked="" class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-9" type="checkbox"/><label class="sk-toggleable__label sk-toggleable__label-arrow" for="sk-estimator-id-9">KNeighborsClassifier</label><div class="sk-toggleable__content"><pre>KNeighborsClassifier()</pre></div></div></div></div></div>
 </div>
 </div>
 </div>
@@ -9383,7 +9401,7 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>0.521505376344086</pre>
+<pre>0.6397849462365591</pre>
 </div>
 </div>
 </div>
@@ -9399,7 +9417,7 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d179087c">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d179087c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9410,10 +9428,27 @@ DiabetesPedigreeFunction column may not be necessary as this feature is already 
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: 28 Repeat activities that need to be done outside pipeline</span>
 <span class="c1"># Reading csv, dropping duplicates &amp; other steps that you might have performed - but need to be done outside the pipeline now  </span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="o">....</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'d2.csv'</span><span class="p">)</span>
 <span class="o">.....</span>
 <span class="c1">#Add other code for dropping duplicates etc</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  Cell </span><span class="ansi-green-intense-fg ansi-bold">In[441], line 5</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    .....</span>
+<span class="ansi-white-intense-fg ansi-bold">        ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+</pre>
 </div>
 </div>
 </div>
